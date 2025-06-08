@@ -1,0 +1,60 @@
+:root {
+  --cell-size: 10px;
+  --hud-height: 50px;
+  --bg-color: #111;
+  --grid-color: #222;
+  --text-color: #eee;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: sans-serif;
+  text-align: center;
+}
+
+#game {
+  display: block;
+  margin: 10px auto;
+  border: 1px solid var(--grid-color);
+  background: #000;
+}
+
+#hud {
+  height: var(--hud-height);
+  line-height: var(--hud-height);
+}
+
+#hud button {
+  margin: 0 5px;
+  padding: 8px 12px;
+  border: none;
+  background: var(--grid-color);
+  color: var(--text-color);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#hud button:hover {
+  opacity: 0.8;
+}
+
+#turn-info {
+  margin-left: 15px;
+  font-weight: bold;
+}
+
+.resource {
+  animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.8; }
+  50%      { opacity: 1; }
+}
